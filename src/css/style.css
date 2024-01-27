@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/OpenSans-Regular.woff") format("woff");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #c1dcdd;
+    border: #697278;
+    color: #000000;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* font-family: "Comic Sans MS", "Trebuchet MS", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; */
+    font-family: "OpenSans";
+    /* user-select: none; */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* отключает синий фон на телефоне при клике */
+  }
+  
+  .title {
+    margin: 15px auto 0;
+  }
+  
+  .nav {
+    display: flex;
+  }
+  
+  #taskOne .container {
+    font-size: 24px;
+    padding: 15px;
+  }
+  
+  #taskOne .container p {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .task {
+    display: flex;
+    margin: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    max-width: 95%;
+    /* width: 500px; */
+    border: 1px solid #0c1e3b;
+    border-radius: 10px;
+    background-color: #f1f3f4;
+  }
+  
+  .btn {
+    padding: 7px 15px;
+    /* padding: 7px 40px; */
+    margin: 15px;
+  
+    font-family: inherit;
+  
+    border: 1px solid #001b726e;
+    border-radius: 4px 15px;
+  
+    color: #f0f2f3;
+    background-color: #0c1e3b;
+  
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    box-shadow: 0px 0px 15px 2px #0c1e3b;
+  }
+  
+  .btn:active {
+    box-shadow: 0px 0px 15px 2px #071730;
+    background-color: #041125;
+  }
+  
+  H2 {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .header {
+    margin-bottom: 22x;
+  }
+    
+  .has-tooltip {
+    position: relative;
+  
+    padding: 10px 15px;
+    color: #ffffff;
+  
+    font-size: 14px;
+  
+    border: none;
+    border-radius: 10px;
+    background: #e43333;
+    text-decoration: none;
+  }
+    
+  .has-tooltip:hover {
+    color: #000000;
+  }
+  
+  .tooltip {
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background-color: #949494;
+    border: 1px solid #999;
+    border-radius: 10px;
+    color: #000000;
+  }
+  
+  .tooltip > p {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  
+  .tooltip > p:first-child {
+    color: #ffffff;
+  }
+  
+  .tooltip > p:nth-child(2) {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0px 0px 10px 10px;
+    height: 24px;
+  }
+  
+  [data-position='right'] {
+    margin-left: 10px;
+  }
+  
+  [data-position='right']::after {
+    content: ''; 
+  
+    position: absolute; /* Абсолютное позиционирование */
+    left: -20px;
+    top: 50%; /* Положение треугольника */
+    transform: translateY(-50%);
+    
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-right: 10px solid #999999; /* Добавляем треугольник */
+  }
+  
+  [data-position='bottom'] {
+    margin-top: 10px;
+  }
+  
+  [data-position='bottom']::after {
+    content: ''; 
+  
+    position: absolute; /* Абсолютное позиционирование */
+    top: -20px;
+    left: 50%; /* Положение треугольника */
+    transform: translateX(-50%);
+    
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid #999999; /* Добавляем треугольник */
+  }
+  
+  [data-position='left'] {
+    margin-left: -10px;
+  }
+  
+  [data-position='left']::after {
+    content: ''; 
+  
+    position: absolute; /* Абсолютное позиционирование */
+    right: -20px;
+    top: 50%; /* Положение треугольника */
+    transform: translateY(-50%);
+    
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-left: 10px solid #999999; /* Добавляем треугольник */
+  }
+  
+  [data-position='top'] {
+    margin-top: -10px;
+  }
+  
+  [data-position='top']::after {
+    content: ''; 
+  
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: -20px;
+    left: 50%; /* Положение треугольника */
+    transform: translateX(-50%);
+    
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-top: 10px solid #999999; /* Добавляем треугольник */
+  }
